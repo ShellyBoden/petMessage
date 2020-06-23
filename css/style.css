@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap');
+
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+    background-image: url(https://i.pximg.net/img-master/img/2014/10/08/12/15/39/36513105_p6_master1200.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+}
+
+.pet_picture{
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 20px;
+    /* position: relative; */
+}
+
+input::-webkit-input-placeholder { /* Edge */
+    color: rgb(184, 184, 184) !important;
+}
+  
+input:-ms-input-placeholder { /* Internet Explorer */
+    color: rgb(184, 184, 184) !important;
+}
+  
+input::placeholder {
+    color: rgb(184, 184, 184) !important;
+}
+
+/* .pet_picture::before{
+    content:"";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 400px;
+    height: 200px;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+} */
+
+h1,form,input, .info{
+    color: rgb(63, 45, 24);
+}
+
+form{
+    font-size: 17px;
+}
+
+.pet_picture img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.pet_picture:hover{
+    transform: scale(1.2); 
+    transition: all 0.2s;
+}
+
+.box1{
+    background-color: #fff;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.line7{
+    background: rgba(221, 201, 135, 0.8);
+    /* box-shadow:rgb(0, 0, 0) 1px 1px 5px 1px inset;   */
+    color: rgb(85, 59, 29);
+    /* text-shadow: 0px 0px 3px rgb(255, 255, 255); */
+    /* border: 1px solid #000; */
+    height: 155px;
+    border-radius: 10px;
+}
+
+.btn-primary{
+    background-color: rgb(85, 59, 29);
+    border: none;
+}
+
+.btn-primary:hover{
+    background-color: rgb(63, 45, 24);
+    border: none;
+}
+
+
+/* --------------------------卷軸客製化-------------------------- */
+::-webkit-scrollbar {
+    width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin:80px 0 5px 0;
+    }
+    ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background: rgb(219,219,219);
+    }
+
+/* --------------------------RWD-------------------------- */
+
+@media (min-width: 576px) { 
+    body{
+        /* background-color: red; */
+    }
+ }
+
+@media (min-width: 768px) { 
+    body{
+        /* background-color: blue; */
+    }
+ }
+
+@media (min-width: 992px) { 
+    body{
+        /* background-color: yellow; */
+    }
+    .form-group{
+        display: flex;
+    }
+    label{
+         /* border: 1px solid #000; */
+         width: 250px;
+         line-height: 35px;
+    }
+    #gender_label{
+        width: 205px;
+    }
+ }
+
+@media (min-width: 1200px) { 
+    body{
+        /* background-color: green;*/
+    }
+ }

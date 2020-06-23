@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>寵物分享天地</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center m-4"><b>留言區</b></h1>
+      <form>
+        <div class="form-group">
+          <label for="breeder">暱稱</label>
+          <input type="text" class="form-control" id="breeder" name="breeder" placeholder="請輸入你的暱稱">
+        </div>      
+        <div class="form-group">
+          <label for="petName">寵物的名字</label>
+          <input type="text" class="form-control" id="petName" name="petName" placeholder="請輸入你養的寵物的名字">
+        </div>  
+        <div class="form-group">
+          <label for="type">寵物的種類</label>
+          <input type="text" class="form-control" id="type" name="type" placeholder="請輸入你養的寵物的種類　例如：貓，狗…">
+        </div>  
+        <div class="form-group">
+          <label for="years">寵物的年齡</label>
+          <input type="text" class="form-control" id="years" name="years" placeholder="請輸入你養的寵物的年齡">
+        </div>  
+        <div class="form-group">
+          <label for="gender" id="gender_label">寵物的性別</label><br>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="gender1" value="女">
+            <label class="form-check-label" for="gender1">女</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="gender2" value="男">
+            <label class="form-check-label" for="gender2">男</label>
+          </div>
+        </div>  
+        <div class="form-group">
+          <label for="picture">寵物的照片</label>
+          <input type="text" class="form-control" id="picture" name="picture" placeholder="請輸入照片網址">
+        </div>  
+        <div class="form-group">
+          <label for="message">你想對你的寵物說什麼？</label>
+          <input type="text" class="form-control" id="message" name="message" placeholder="請輸入你想寵物說的話">
+        </div>  
+        <button type="button" class="btn btn-primary btn-block" onclick="sendData()">送出</button>
+      </form>
+      <div id="show" class="col-12 mt-4 ml-1"></div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="js/main.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+  <template id="template01" style="display:none">
+    <div class="box1 rounded mb-4 p-4 mr-0 row">
+      <div class="pet_picture m-0 p-0 col-sm-12 col-md-6 col-lg-4">
+        <img src="IMG_HERE" class="m-0 p-0">
+      </div>
+      <div class="info col-sm-12 col-md-6 col-lg-8 pl-lg-4">
+          <div class="line1 mt-md-0 my-3">寵物主人：BREEDER</div>
+          <div class="line2 mb-3">寵物名稱：PETNAME</div>
+          <div class="line3 mb-3">寵物種類：TYPE</div>
+          <div class="line4 mb-3">寵物年齡：YEARS</div>
+          <div class="line5 mb-3">寵物性別：GENDER</div>
+          <div class="line6 mb-3">你想對寵物說的話：</div>
+          <div class="line7 mb-3 p-3">MESSAGE</div>
+      </div>
+    </div>
+  </template>
+</html>
